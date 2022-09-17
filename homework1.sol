@@ -10,11 +10,13 @@ contract FeeCollector {
     }
     
     receive() payable external {
+     /* Contract accept the ethers and deposit balance.*/
         balance += msg.value; 
     }
     
     
     function withdraw(uint amount, address payable destAddr) public {
+      /* Controls the if msg.sender is "owner"*/
         require(msg.sender == owner, "Only owner can withdraw");
         require(amount <= balance, "Insufficient funds");
         
