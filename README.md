@@ -4,8 +4,8 @@ first case detail: Add up all the digits of the number and Decide whether it is 
 
 Build and deploy a counter with Solidity
 
-Build and Deploy an Ether-Store Smart Contract
+Build and Deploy an Ether-Store Smart Contract --> homework1
 
-Build and Deploy a To-Do List
+Build and Deploy a To-Do List --> homework2
 
-Build and Deploy a Crowdfund Application
+Build and Deploy a Crowdfund Application --> homework3
