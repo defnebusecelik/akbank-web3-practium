@@ -28,13 +28,9 @@ contract CrowdFund {
     struct Campaign {
         // Creator of campaign
         address creator;
-        // Amount of tokens to raise
         uint goal;
-        // Total amount pledged
         uint pledged;
-        // Timestamp of start of campaign
         uint32 startAt;
-        // Timestamp of end of campaign
         uint32 endAt;
         // True if goal was reached and creator has claimed the tokens.
         bool claimed;
@@ -42,7 +38,6 @@ contract CrowdFund {
 
     IERC20 public immutable token;
     // Total count of campaigns created.
-    // It is also used to generate id for new campaigns.
     uint public count;
     // Mapping from id to Campaign
     mapping(uint => Campaign) public campaigns;
@@ -54,6 +49,7 @@ contract CrowdFund {
     }
 
     function launch(
+    //Launching the event with three parameters (using time() function here)
         uint _goal,
         uint32 _startAt,
         uint32 _endAt
